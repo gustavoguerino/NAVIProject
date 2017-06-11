@@ -10,7 +10,8 @@
                 <div class="panel-heading">Informações Pessoais</div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ route('formPersonalPost') }}">
+                        {{ csrf_field() }}
                         <fieldset>
 
                         <!-- Text input-->

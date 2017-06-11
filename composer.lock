@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "96098e473b028cdb2529580554a1ae3e",
+    "content-hash": "ccc752069cfcab2925581c219aaa8e7e",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -426,6 +426,46 @@
                 "psysh"
             ],
             "time": "2017-06-01T16:31:26+00:00"
+        },
+        {
+            "name": "laravellegends/pt-br-validator",
+            "version": "5.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LaravelLegends/pt-br-validator.git",
+                "reference": "b7c64586edae32400f088cd2ebbda7799a5103f3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LaravelLegends/pt-br-validator/zipball/b7c64586edae32400f088cd2ebbda7799a5103f3",
+                "reference": "b7c64586edae32400f088cd2ebbda7799a5103f3",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.*"
+            },
+            "require-dev": {
+                "orchestra/testbench": "3.1.*",
+                "phpunit/phpunit": "4.8.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LaravelLegends\\PtBrValidator\\": "src/pt-br-validator"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Wallace de Souza Vizerra",
+                    "email": "wallacemaxters@gmail.com"
+                }
+            ],
+            "description": "Uma biblioteca contendo validações de formatos Brasileiros, para o Laravel 5",
+            "time": "2017-06-07T13:16:44+00:00"
         },
         {
             "name": "league/flysystem",
@@ -1471,16 +1511,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.3.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "e79d363049d1c2128f133a2667e4f4190904f7f4"
+                "reference": "f29dca382a6485c3cbe6379f0c61230167681937"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/e79d363049d1c2128f133a2667e4f4190904f7f4",
-                "reference": "e79d363049d1c2128f133a2667e4f4190904f7f4",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/f29dca382a6485c3cbe6379f0c61230167681937",
+                "reference": "f29dca382a6485c3cbe6379f0c61230167681937",
                 "shasum": ""
             },
             "require": {
@@ -1492,7 +1532,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -1526,7 +1566,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14T01:06:16+00:00"
+            "time": "2017-06-09T14:24:12+00:00"
         },
         {
             "name": "symfony/process",

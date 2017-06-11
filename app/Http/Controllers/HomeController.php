@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Address;
+use Auth;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $address = Address::where('user_id', '=', Auth::user()->id)->firstOrFail();
+        return view('home',get_defined_vars());
     }
 }

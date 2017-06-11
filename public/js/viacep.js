@@ -1,18 +1,18 @@
 
     function limpa_formulário_cep() {
             //Limpa valores do formulário de cep.
-            document.getElementById('rua').value=("");
-            document.getElementById('bairro').value=("");
-            document.getElementById('cidade').value=("");
+            document.getElementById('street').value=("");
+            document.getElementById('neighborhood').value=("");
+            document.getElementById('city').value=("");
             document.getElementById('uf').value=("");
     }
 
     function callback_consulta(conteudo) {
         if (!("erro" in conteudo)) {
             //Atualiza os campos com os valores.
-            document.getElementById('rua').value=(conteudo.logradouro);
-            document.getElementById('bairro').value=(conteudo.bairro);
-            document.getElementById('cidade').value=(conteudo.localidade);
+            document.getElementById('street').value=(conteudo.logradouro);
+            document.getElementById('neighborhood').value=(conteudo.bairro);
+            document.getElementById('city').value=(conteudo.localidade);
             document.getElementById('uf').value=(conteudo.uf);
         } //end if.
         else {
@@ -37,9 +37,9 @@
             if(validacep.test(cep)) {
 
                 //Preenche os campos com "..." enquanto consulta webservice.
-                document.getElementById('rua').value="...";
-                document.getElementById('bairro').value="...";
-                document.getElementById('cidade').value="...";
+                document.getElementById('street').value="...";
+                document.getElementById('neighborhood').value="...";
+                document.getElementById('city').value="...";
                 document.getElementById('uf').value="...";
 
                 //Cria um elemento javascript.

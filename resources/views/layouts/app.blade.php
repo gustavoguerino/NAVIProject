@@ -9,9 +9,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'PersonInfo') }}</title>
-
+    
     <!-- Styles -->
+    
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('css')
 </head>
 <body>
     <div id="app">
@@ -48,7 +50,7 @@
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ Auth::user()->email }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">

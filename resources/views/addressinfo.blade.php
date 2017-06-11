@@ -8,17 +8,21 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Endereço</div>
-
                 <div class="panel-body">
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ route('formAddressPost') }}">
+                        {{ csrf_field() }}
                         <fieldset>
 
                         <!-- Text input-->
                         <div class="form-group">
                         <label class="col-md-3 control-label" for="cep">CEP</label>  
                         <div class="col-md-6">
-                        <input id="cep" name="cep" type="text" placeholder="" class="form-control input-md" required="" onblur="pesquisacep(this.value);">
-                            
+                        <input id="cep" name="cep" type="text" placeholder="" class="form-control input-md"  onblur="pesquisacep(this.value);">
+                            @if ($errors->has('cep'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('cep') }}</strong>
+                                    </span>
+                            @endif    
                         </div>
                         </div>
 
@@ -26,8 +30,7 @@
                         <div class="form-group">
                         <label class="col-md-3 control-label" for="rua">Rua</label>  
                         <div class="col-md-6">
-                        <input id="rua" name="rua" type="text" placeholder="" class="form-control input-md" required="">
-                            
+                        <input id="street" name="street" type="text" placeholder="" class="form-control input-md" > 
                         </div>
                         </div>
 
@@ -35,17 +38,7 @@
                         <div class="form-group">
                         <label class="col-md-3 control-label" for="numero">Numero</label>  
                         <div class="col-md-6">
-                        <input id="numero" name="numero" type="text" placeholder="" class="form-control input-md" required="">
-                            
-                        </div>
-                        </div>
-
-                        <!-- Text input-->
-                        <div class="form-group">
-                        <label class="col-md-3 control-label" for="complemento">Complemento</label>  
-                        <div class="col-md-6">
-                        <input id="complemento" name="complemento" type="text" placeholder="" class="form-control input-md" required="">
-                            
+                        <input id="number" name="number" type="text" placeholder="" class="form-control input-md" >
                         </div>
                         </div>
 
@@ -53,8 +46,7 @@
                         <div class="form-group">
                         <label class="col-md-3 control-label" for="bairro">Bairro</label>  
                         <div class="col-md-6">
-                        <input id="bairro" name="bairro" type="text" placeholder="" class="form-control input-md" required="">
-                            
+                        <input id="neighborhood" name="neighborhood" type="text" placeholder="" class="form-control input-md" >
                         </div>
                         </div>
 
@@ -62,7 +54,7 @@
                         <div class="form-group">
                             <label class="col-md-3 control-label" for="cidade">Cidade</label>  
                             <div class="col-md-6">
-                                <input id="cidade" name="cidade" type="text" placeholder="" class="form-control input-md" required="">
+                                <input id="city" name="city" type="text" placeholder="" class="form-control input-md" >   
                             </div>
                         </div>
 
@@ -70,7 +62,7 @@
                         <div class="form-group">
                             <label class="col-md-3 control-label" for="cidade">UF</label>  
                             <div class="col-md-2">
-                                <input id="uf" name="uf" type="text" placeholder="" class="form-control input-md" required="">    
+                                <input id="uf" name="uf" type="text" placeholder="" class="form-control input-md" >    
                             </div>
                         </div>
                         
