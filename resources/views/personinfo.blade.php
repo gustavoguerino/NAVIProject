@@ -16,9 +16,9 @@
 
                         <!-- Text input-->
                         <div class="form-group">
-                        <label class="col-md-4 control-label" for="fullname">Nome completo</label>  
+                        <label class="col-md-4 control-label" for="name">Nome completo</label>  
                         <div class="col-md-8">
-                        <input id="fullname" name="fullname" type="text" placeholder="" class="form-control input-md" required="">
+                        <input id="name" name="name" type="text" placeholder="" class="form-control input-md" >
                             
                         </div>
                         </div>
@@ -27,7 +27,7 @@
                         <div class="form-group">
                         <label class="col-md-4 control-label" for="rg">RG</label>  
                         <div class="col-md-5">
-                        <input id="rg" name="rg" type="text" placeholder="" class="form-control input-md" required="">
+                        <input id="rg" name="rg" type="text" placeholder="" class="form-control input-md" >
                             
                         </div>
                         </div>
@@ -36,27 +36,28 @@
                         <div class="form-group">
                         <label class="col-md-4 control-label" for="cpf">CPF</label>  
                         <div class="col-md-5">
-                        <input id="cpf" name="cpf" type="text" placeholder="" class="form-control input-md" required="">
+                        <input id="cpf" name="cpf" type="text" placeholder="" class="form-control input-md" >
                             
                         </div>
                         </div>
 
                         <!-- Text input-->
                         <div class="form-group">
-                        <label class="col-md-4 control-label" for="nascimento">Data de Nascimento</label>  
+                        <label class="col-md-4 control-label" for="birth_date">Data de Nascimento</label>  
                         <div class="col-md-4">
-                        <input id="nascimento" name="nascimento" type="text" placeholder="" class="form-control input-md" required="">
+                        <input id="birth_date" name="birth_date" type="text" placeholder="" class="form-control input-md" >
                             
                         </div>
                         </div>
 
                         <!-- Select Basic -->
                         <div class="form-group">
-                        <label class="col-md-4 control-label" for="genero">Gênero</label>
+                        <label class="col-md-4 control-label" for="genre">Gênero</label>
                         <div class="col-md-4">
-                            <select id="genero" name="genero" class="form-control">
+                            <select id="genre" name="genre" class="form-control">
                             <option value="Masculino">Masculino</option>
                             <option value="Feminino">Feminino</option>
+                            <option value="Feminino">Outro</option>
                             </select>
                         </div>
                         </div>
@@ -76,6 +77,7 @@
                 </div>
             </div>  
         </div>
-    </div>
 </div>
 @endsection
+
+    </div>
