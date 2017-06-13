@@ -32,8 +32,7 @@ class InfosController extends Controller
     }
     public function UpdateInfoPersonal(){
         $validator = Validator::make(Input::all(), [
-            'cpf' => 'cpf',
-            'birth_date' => 'data',
+            'name' => 'string',
         ]);
         if ($validator->fails())
         {
@@ -46,6 +45,11 @@ class InfosController extends Controller
     public function UpdateInfoAddress(){
         $validator = Validator::make(Input::all(), [
             'cep' => 'string|formato_cep',
+            'street' => 'string|max:250|min:1',
+            'name' => 'string|max:250|min:1',
+            'rg' => 'string|max:12|min:7',
+            'city' => 'string|max:100|min:1',
+            'uf' => 'string|max:2|min:2',
         ]);
         if ($validator->fails())
         {
