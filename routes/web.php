@@ -23,5 +23,5 @@ Route::get( 'infos/address', 'InfosController@GetInfoAddress')->name('formAddres
 Route::post( 'infos/personal', 'InfosController@UpdateInfoPersonal')->name('formPersonalPost');
 Route::post( 'infos/address', 'InfosController@UpdateInfoAddress')->name('formAddressPost');
 
-Route::delete( 'infos/personal', 'InfosController@UpdateInfoPersonal')->name('formPersonalDel');
-Route::delete( 'infos/address', 'InfosController@UpdateInfoAddress')->name('formAddressDel');
+Route::get( 'infos/personalDel', 'InfosController@DelInfoPersonal')->name('formPersonalDel');
+Route::get( 'infos/addressDel', 'InfosController@DelInfoAddress')->name('formAddressDel');

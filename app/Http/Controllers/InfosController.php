@@ -30,6 +30,29 @@ class InfosController extends Controller
         $old = Address::where('user_id', '=', Auth::user()->id)->firstOrFail();
         return view('addressinfo',get_defined_vars());
     }
+    public function DelInfoPersonal()
+    {
+        $user = Auth::user();
+        $user->name = null;
+        $user->cpf = "";
+        $user->rg = "";
+        $user->birth_date = null;
+        $user->genre = "";
+        $user->save();
+        return redirect()->route('home');
+    }
+    public function DelInfoAddress()
+    {
+        $address = Address::where('user_id', '=', Auth::user()->id)->firstOrFail();
+        $address->cep = "";
+        $address->street = "";
+        $address->number = "";
+        $address->neighborhood = "";
+        $address->city = "";
+        $address->uf = "";
+        $address->save();
+        return redirect()->route('home');
+    }
     public function UpdateInfoPersonal(){
         $dados = Input::all();
         $validator = Validator::make($dados, [

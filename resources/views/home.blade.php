@@ -103,7 +103,7 @@
                                             Editar
                                         </button>
                                     </a>
-                                    <a href="{{ route('formAddressDel') }}">
+                                    <a href="{{ route('formAddressDel') }}" >
                                         <button type="button" class="btn btn-danger">
                                             Remover
                                         </button>
