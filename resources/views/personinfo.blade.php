@@ -65,10 +65,11 @@
 								<label class="col-md-4 control-label" for="genre">Gênero</label>
 								<div class="col-md-4">
 									<select id="genre" name="genre" value="{{ $old->genre }}" class="form-control">
-										<option value="Masculino">Masculino</option>
-										<option value="Feminino">Feminino</option>
-										<option value="Outro">Outro</option>
+										<option class="non" value="Masculino">Masculino</option>
+										<option class="non" value="Feminino">Feminino</option>
+										<option class="editable" value="Outro">Outro</option>
 									</select>
+									<input class="editOption" value="{{ $old->genre }}" style="display:none;"></input>
 								</div>
 							</div>
 							<!-- Button (Double) -->

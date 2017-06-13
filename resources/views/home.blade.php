@@ -59,7 +59,8 @@
                                     <h2>Conte um pouco mais sobre você!</h2>
                                     <a href="{{ route('formPersonal') }}">
                                         <button type="button" class="btn btn-success">
-                                            Adicionar informações pessoais
+                                            Adicionar informações pessoais 
+                                            <span class="glyphicon glyphicon-plus"></span>
                                         </button>
                                     </a>
                                     </div>
@@ -127,6 +128,7 @@
                                     <a href="{{ route('formAddress') }}">
                                         <button type="button" class="btn btn-success">
                                             Adicionar informações de endereçamento
+                                            <span class="glyphicon glyphicon-plus"></span>
                                         </button>
                                     </a>
                                 </div>
