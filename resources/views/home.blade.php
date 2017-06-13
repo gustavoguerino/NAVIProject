@@ -15,6 +15,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 
+                                @if (Auth::user()->name)
                                 <table class="table  table-condensed">
                                     <tbody>
                                     <tr>
@@ -44,12 +45,29 @@
                                     </tbody>
                                 </table>
                                 <a href="{{ route('formPersonal') }}">
-                                    <button type="button" class="btn btn-warning btn-block">
+                                    
+                                    <button type="button" class="btn btn-success">
                                         Editar
                                     </button>
                                 </a>
+                                <a href="{{ route('formPersonalDel') }}">
+                                    <button type="button" class="btn btn-danger">
+                                        Remover
+                                    </button>
+                                </a>
+                                @else
+                                <div class="text-center">
+                                    <h2>Conte um pouco mais sobre você!</h2>
+                                    <a href="{{ route('formPersonal') }}">
+                                        <button type="button" class="btn btn-success">
+                                            Adicionar informações pessoais
+                                        </button>
+                                    </a>
+                                    </div>
+                                @endif
                             </div>
                             <div class="col-md-6">
+                                @if ($address->cep)
                                 <table class="table table-condensed">
                                     <tbody>
                                     <tr>
@@ -78,15 +96,32 @@
                                     </tr>
                                     </tbody>
                                 </table>
-                                <a href="{{ route('formAddress') }}">
-                                    <button type="button" class="btn btn-info btn-block">
-                                        Editar
-                                    </button>
-                                </a>
+                                
+                                    <a href="{{ route('formAddress') }}">
+                                        
+                                        <button type="button" class="btn btn-success">
+                                            Editar
+                                        </button>
+                                    </a>
+                                    <a href="{{ route('formAddressDel') }}">
+                                        <button type="button" class="btn btn-danger">
+                                            Remover
+                                        </button>
+                                    </a>
+                                @else
+                                <div class="text-center">
+                                    <h2>Qual seu endereço?</h2>
+                                    <a href="{{ route('formAddress') }}">
+                                        <button type="button" class="btn btn-success">
+                                            Adicionar informações de endereçamento
+                                        </button>
+                                    </a>
+                                </div>
+                                @endif
+                                
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
