@@ -74,11 +74,11 @@ class InfosController extends Controller
     public function UpdateInfoAddress(){
         $validator = Validator::make(Input::all(), [
             'cep' => 'required|string|formato_cep',
-            'street' => 'required|string|max:250|min:1',
-            'name' => 'required|string|max:250|min:1',
-            'rg' => 'required|string|max:12|min:7',
-            'city' => 'required|string|max:100|min:1',
-            'uf' => 'required|string|max:2|min:2',
+            'street' => 'required|string|max:250',
+            'neighborhood' => 'required|string|max:250',
+            'number' => 'required|string|max:12',
+            'city' => 'required|string|max:100',
+            'uf' => 'required|string|max:3',
         ]);
         if ($validator->fails())
         {
