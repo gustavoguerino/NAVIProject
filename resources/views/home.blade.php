@@ -6,17 +6,16 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Suas informações</div>
 
                 <div class="panel-body">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-md-6">
-                                
+                            <div class="col-md-12">
+                                <h2>Informações pessoais</h2><hr>
                                 @if (Auth::user()->name)
-                                <table class="table  table-condensed">
+                                <table class="table  table-striped">
                                     <tbody>
                                     <tr>
                                         <td>Nome completo:</td>
@@ -66,9 +65,23 @@
                                     </div>
                                 @endif
                             </div>
-                            <div class="col-md-6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+
+                <div class="panel-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2>Endereços</h2><hr>
                                 @if ($address->cep)
-                                <table class="table table-condensed">
+                                <table class="table table-striped">
                                     <tbody>
                                     <tr>
                                         <td>CEP:</td>

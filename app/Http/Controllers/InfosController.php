@@ -55,18 +55,18 @@ class InfosController extends Controller
     }
     public function UpdateInfoPersonal(){
         $dados = Input::all();
+        $dados['birth_date'] = DateTime::createFromFormat('d/m/Y', $dados['birth_date'])->format('Y-m-d');
         $validator = Validator::make($dados, [
             'name' => 'required|string',
             'cpf' => 'required|string',
             'rg' => 'required|string',
-            'birth_date' => 'required|string',
+            'birth_date' => 'required|string|date',
             'genre' => 'required|string',
         ]);
         if ($validator->fails())
         {
             return redirect()->route('formPersonal')->withErrors($validator);
         }
-        $dados['birth_date'] = DateTime::createFromFormat('d/m/Y', $dados['birth_date'])->format('Y-m-d');
         Auth::user()->update($dados);
         return redirect()->route('home');
     }
