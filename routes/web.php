@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-}); 
+Route::get('/', 'Auth\LoginController@login');
 
 Auth::routes();
 
@@ -21,5 +19,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get( 'infos/personal', 'InfosController@GetInfoPersonal')->name('formPersonal');
 Route::get( 'infos/address', 'InfosController@GetInfoAddress')->name('formAddress');
+
 Route::post( 'infos/personal', 'InfosController@UpdateInfoPersonal')->name('formPersonalPost');
 Route::post( 'infos/address', 'InfosController@UpdateInfoAddress')->name('formAddressPost');
+
+Route::delete( 'infos/personal', 'InfosController@UpdateInfoPersonal')->name('formPersonalDel');
+Route::delete( 'infos/address', 'InfosController@UpdateInfoAddress')->name('formAddressDel');
