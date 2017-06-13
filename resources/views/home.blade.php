@@ -40,7 +40,7 @@
                                     </tr>
                                     <tr>
                                         <td>Data de Nacimento:</td>
-                                        <td>{{ Auth::user()->birth_date }}</td>
+                                        <td>{{ Carbon\Carbon::parse(Auth::user()->birth_date)->format('d-m-Y') }}</td>
                                     </tr>
                                     </tbody>
                                 </table>

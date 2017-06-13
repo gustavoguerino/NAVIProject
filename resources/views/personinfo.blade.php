@@ -53,7 +53,7 @@
 							<div class="form-group">
 								<label class="col-md-4 control-label" for="birth_date">Data de Nascimento</label>  
 								<div class="col-md-4">
-									<input id="birth_date" name="birth_date" placeholder="Ex.: dd/mm/aaaa" required="" type="text" value="{{ $old->birth_date }}" class="form-control input-md date" >
+									<input id="birth_date" name="birth_date" placeholder="Ex.: dd/mm/aaaa" required="" type="text" value="{{ Carbon\Carbon::parse($old->birth_date)->format('d-m-Y i') }} " class="form-control input-md date" >
 									@if ($errors->has('birth_date'))
 									<span class="help-block">
 									<strong>{{ $errors->first('birth_date') }}</strong> 

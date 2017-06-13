@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
 use App\Address;
 use Auth;
-
+use DateTime;
 class InfosController extends Controller
 {
     /**
@@ -31,14 +31,16 @@ class InfosController extends Controller
         return view('addressinfo',get_defined_vars());
     }
     public function UpdateInfoPersonal(){
-        $validator = Validator::make(Input::all(), [
+        $dados = Input::all();
+        $validator = Validator::make($dados, [
             'name' => 'string',
         ]);
         if ($validator->fails())
         {
             return redirect()->route('formPersonal')->withErrors($validator);
         }
-        Auth::user()->update(Input::all());
+        $dados['birth_date'] = DateTime::createFromFormat('d/m/Y', $dados['birth_date'])->format('Y-m-d');
+        Auth::user()->update($dados);
         return redirect()->route('home');
     }
 
