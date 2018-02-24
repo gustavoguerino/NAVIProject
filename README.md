@@ -1,4 +1,4 @@
-# Projeto para seleção de bolsista do Navi
+# Projeto para seleção de bolsista do Navi 2017
 ##### Tecnologias usadas:
  - PHP utilizando framework Laravel
  - MySQL
